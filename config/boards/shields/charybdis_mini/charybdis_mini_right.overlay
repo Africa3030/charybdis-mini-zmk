@@ -1,4 +1,4 @@
-#include <dt-bindings/zmk/input.h>
+#include <dt-bindings/input/input-event-codes.h>
 #include "charybdis_mini.dtsi"
 
 / {
