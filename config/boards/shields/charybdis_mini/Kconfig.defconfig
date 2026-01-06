@@ -1,0 +1,6 @@
+if SHIELD_CHARYBDIS_MINI_LEFT || SHIELD_CHARYBDIS_MINI_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Charybdis Mini"
+
+endif

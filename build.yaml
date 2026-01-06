@@ -1,0 +1,7 @@
+# This file defines the builds for GitHub Actions
+
+include:
+  - board: nice_nano_v2
+    shield: charybdis_mini_left
+  - board: nice_nano_v2
+    shield: charybdis_mini_right
