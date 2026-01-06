@@ -1,12 +1,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-    kscan_left: kscan_left {};
-    kscan_right: kscan_right {};
-
     chosen {
         zmk,matrix-transform = &default_transform;
-        zmk,physical-layout = &physical_layout0;
     };
 
     default_transform: matrix_transform {
@@ -27,21 +23,5 @@
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
-
-    kscan0: kscan {
-        compatible = "zmk,kscan-composite";
-        rows = <5>;
-        columns = <12>;
-
-        left_half: left_half {
-            kscan = <&kscan_left>;
-        };
-
-        right_half: right_half {
-            column-offset = <6>;
-            kscan = <&kscan_right>;
-        };
     };
 };

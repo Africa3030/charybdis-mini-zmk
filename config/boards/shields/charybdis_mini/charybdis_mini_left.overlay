@@ -1,8 +1,24 @@
 #include "charybdis_mini.dtsi"
 
-&kscan_left {
-    compatible = "zmk,kscan-gpio-matrix";
-    label = "KSCAN_LEFT";
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-composite";
+        label = "KSCAN";
+        rows = <5>;
+        columns = <12>;
+
+        matrix: matrix {
+            kscan = <&kscan_matrix>;
+        };
+    };
+
+    kscan_matrix: kscan_matrix {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN_MATRIX";
     diode-direction = "col2row";
 
     col-gpios
