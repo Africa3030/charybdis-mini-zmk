@@ -33,7 +33,7 @@
     kscan0: kscan {
         compatible = "zmk,kscan-composite";
         rows = <5>;
-        cols = <12>;
+        columns = <12>;
 
         left_half: left_half {
             kscan = <&kscan_left>;
